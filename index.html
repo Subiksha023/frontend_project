@@ -1,146 +1,65 @@
+
+
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .navbar {
-        background-color: #ffffff00;
-        overflow: hidden;
-        padding: 10px;
-        border-radius: 10px;
-        margin-bottom: 120px;
-        margin-top: -250px;
-        margin-left: -100px ;
-        text-align: center;
-        }
-        .navbar a {
-        float: left;
-        color: rgb(0, 0, 0);
-        padding: 14px 20px;
-        text-decoration: none;
-        font-size: 18px;
-        font-family : Helvetica;
-        margin-right: 30px;
-        }
-        .navbar a:hover {
-        background-color: #ddd;
-        color: black;
-        }
-        .curved-box {
-        width: 1500px;
-        height: 250px;
-        padding: 290px;
-        background-color: #f0f8ff;
-        border-radius: 45px; /* curved corners */
-        margin: 61px auto; /* center the box */
-        text-align: left;
-        }
-        .my-image {
-        width: 1000px;         /* Set width */
-        height: auto;        /* Set height */
-        position: fixed;   /* Allows precise placement */
-        top: -358px;           /* Distance from top of page */
-        left: 1200px;          /* Distance from left */
-        z-index: 999;
-        }
-        .my-logo {
-        width: 400px;         /* Set width */
-        height: auto;        /* Set height */
-        position: fixed;   /* Allows precise placement */
-        top: -55px;           /* Distance from top of page */
-        left: 90px;          /* Distance from left */
-        z-index: 999;
-        }
-        .text-section {
-        position: relative;
-        top: 10px;
-        left: -150px;
-        }
-    </style>
-
-    </head>
-
-
-    
-    <body style=" margin: 0; padding: 0; background: linear-gradient(to bottom, #000000, #2c0183); ">
-
-    <div class="curved-box">
-        
-
-        <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-        </div>
-        
-        <div class = 'text-section'>
-            <h1 style="font-size: 40px; font: Helvetica;">Hi, I'm Subiksha!</h1>
-            <h1 style="font-size: 80px; font : Candara; color: #2d0285;">ML ENGINEER</h1>
-            <p style = 'font-size: 20px;'> I am a recent graduate from IIT Hyderabad with <br>
-                a background in Artificial Intelligence, Machine Learning, and Deep Learning. <br>
-                 I’m passionate about building impactful solutions through technology.</p>
-            <img src="pic.png" class="my-image" alt="My Image">
-            <img src="logo.png" class="my-logo" alt="My logo">
-        </div>
-        
-
-    </div>
-
-    
-
-    </body>
-
-
-
-</html>
-
-
-
-<!-- <!DOCTYPE html>
-<html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <style>
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      font-family: Helvetica, sans-serif;
+      width: 100%;
+      min-height: 100vh;
+      overflow-y: hidden;
+      overflow-y: auto;
       background: linear-gradient(to bottom, #000000, #2c0183);
+      background-attachment: fixed; /* important for scroll effect */
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Helvetica, sans-serif;
     }
-
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
     .curved-box {
+      width: 90%;
       max-width: 1200px;
-      margin: 60px auto;
+      height: 400%;
       background-color: #f0f8ff;
-      border-radius: 45px;
-      padding: 40px;
+      border-radius: 30px;
+      margin: 3% auto 3% auto;
+      padding: 20px;
+      position: relative;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      align-items: left;
+      justify-content: space-between;
     }
 
     .navbar {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-bottom: 40px;
+      text-align: center;
+      margin-bottom: 10px;
     }
 
     .navbar a {
-      text-decoration: none;
       color: #000;
-      font-size: 18px;
-      padding: 10px 20px;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 0 10px;
       border-radius: 5px;
-      transition: all 0.3s ease;
     }
 
     .navbar a:hover {
@@ -148,89 +67,100 @@
       color: black;
     }
 
-    .content {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      width: 100%;
-      gap: 30px;
-    }
-
     .text-section {
-      flex: 1 1 500px;
+      text-align: center;
+      padding: 0 10px;
     }
 
     .text-section h1:first-child {
-      font-size: 40px;
-      margin: 0;
+      font-size: 24px;
+      margin: 5px 0;
     }
 
     .text-section h1:nth-child(2) {
-      font-size: 80px;
+      font-size: 38px;
       font-family: Candara, sans-serif;
       color: #2d0285;
-      margin: 10px 0;
+      margin: 5px 0 10px 0;
     }
 
     .text-section p {
-      font-size: 20px;
-      line-height: 1.6;
+      font-size: 16px;
+      line-height: 1.4;
+      color: #000;
+      margin: 10px 0;
     }
 
     .my-image {
-      flex: 1 1 400px;
-      max-width: 100%;
+      width: 50%;
+      max-width: 400px;
       height: auto;
-      object-fit: contain;
+      margin-top: 10px;
     }
 
     .my-logo {
+      width: 220px;
+      height: auto;
       position: absolute;
       top: 20px;
       left: 20px;
-      width: 150px;
-      height: auto;
-    }
-
-    @media (max-width: 768px) {
-      .text-section h1:nth-child(2) {
-        font-size: 50px;
-      }
-      .text-section h1:first-child {
-        font-size: 30px;
-      }
-      .navbar {
-        gap: 15px;
-        font-size: 16px;
-      }
     }
   </style>
 </head>
 
 <body>
-  <img src="logo.png" class="my-logo" alt="My logo" />
 
   <div class="curved-box">
+    <img src="logo.png" class="my-logo" alt="My logo">
+
     <div class="navbar">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+      <a href="page2.html">Contact</a>
     </div>
 
-    <div class="content">
-      <div class="text-section">
-        <h1>Hi, I'm Subiksha!</h1>
-        <h1>ML ENGINEER</h1>
-        <p>
-          I am a recent graduate from IIT Hyderabad with a background in
-          Artificial Intelligence, Machine Learning, and Deep Learning. I’m
-          passionate about building impactful solutions through technology.
-        </p>
-      </div>
-
-      <img src="pic.png" class="my-image" alt="My Image" />
+    <div class="text-section">
+      <h1>Hi, I'm Subiksha!</h1>
+      <h1>ML ENGINEER</h1>
+      <p>I am a recent graduate from IIT Hyderabad with<br>
+        a background in Artificial Intelligence, Machine Learning, and Deep Learning.<br>
+        I’m passionate about building impactful solutions through technology.
+      </p>
     </div>
+
+    <img src="pic.png" class="my-image" alt="My Image">
+
+    <section id="home">
+        <h1>Home</h1>
+        <p>Welcome to the homepage.</p>
+        <p style="line-height: 1.8;"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+        <p style="line-height: 1.8;"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </section>
+
+    <section id="about">
+        <h1>About</h1>
+        <p>Welcome to the about page.</p>
+        <p style="line-height: 1.8;"> Where does it come from?
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+        <p style="line-height: 1.8;"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </section>
+
+    <section id="services">
+        <h1>Services</h1>
+        <p>Welcome to the services page.</p>
+        <p style="line-height: 1.8;"> Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p style="line-height: 1.8;"> Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+    </section>
+
+    
   </div>
+
 </body>
-</html> -->
+
+</html>
+
